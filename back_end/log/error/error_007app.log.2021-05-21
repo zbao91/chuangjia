@@ -1,0 +1,182 @@
+[E 210521 23:38:36 handler.py:95] --------输入参数---------
+[E 210521 23:38:36 handler.py:96] {}
+[E 210521 23:38:36 handler.py:95] --------输入参数---------
+[E 210521 23:38:36 handler.py:96] {}
+[E 210521 23:38:36 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611516, 'data': None}
+[E 210521 23:38:36 application.py:53] [9023][ 200]:[OPTIONS]:[/files/folder_list]::[uid:]:[4.67ms]:[0]:[服务异常]--[{}]
+[E 210521 23:38:36 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611516, 'data': None}
+[E 210521 23:38:36 application.py:53] [9023][ 200]:[OPTIONS]:[/files/category_list]::[uid:]:[2.14ms]:[0]:[服务异常]--[{}]
+[E 210521 23:38:36 handler.py:95] --------输入参数---------
+[E 210521 23:38:36 handler.py:96] {}
+[I 210521 23:38:36 tordb.py:236] SQL: select a.name as folder_name, b.sort_order, c.name as category_name, a.id as folder_id, c.id as category_id  from file_folders a join file_category_folder_rel b on a.id = b.folder_id  join file_categories c on c.id = b.category_id  where a.status = 1 and b.status = 1 and c.status = 1   order by b.sort_order asc, c.sort_order asc 
+[E 210521 23:38:36 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611516, 'data': []}
+[E 210521 23:38:36 application.py:53] [9023][ 200]:[ GET]:[/files/folder_list]::[uid:]:[2.53ms]:[1]:[成功]--[{}]
+[E 210521 23:38:36 handler.py:95] --------输入参数---------
+[E 210521 23:38:36 handler.py:96] {}
+[I 210521 23:38:36 tordb.py:236] SQL: select id as category_id, name as category_name from file_categories  where status = 1 order by sort_order asc 
+[E 210521 23:38:36 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611516, 'data': []}
+[E 210521 23:38:36 application.py:53] [9023][ 200]:[ GET]:[/files/category_list]::[uid:]:[1.77ms]:[1]:[成功]--[{}]
+[E 210521 23:38:38 handler.py:95] --------输入参数---------
+[E 210521 23:38:38 handler.py:96] {}
+[E 210521 23:38:38 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611518, 'data': None}
+[E 210521 23:38:38 application.py:53] [9023][ 200]:[OPTIONS]:[/standard/folder_list]::[uid:]:[1.56ms]:[0]:[服务异常]--[{}]
+[E 210521 23:38:38 handler.py:95] --------输入参数---------
+[E 210521 23:38:38 handler.py:96] {}
+[E 210521 23:38:38 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611518, 'data': None}
+[E 210521 23:38:38 application.py:53] [9023][ 200]:[OPTIONS]:[/standard/file_list]::[uid:]:[1.33ms]:[0]:[服务异常]--[{}]
+[E 210521 23:38:38 handler.py:95] --------输入参数---------
+[E 210521 23:38:38 handler.py:96] {}
+[I 210521 23:38:38 tordb.py:236] SQL: select id as folder_id, name as folder_name from standard_folders  where status = 1 and parent_folder_id = '-1' order by sort_order asc 
+[E 210521 23:38:38 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611518, 'data': []}
+[E 210521 23:38:38 application.py:53] [9023][ 200]:[ GET]:[/standard/folder_list]::[uid:]:[2.07ms]:[1]:[成功]--[{}]
+[E 210521 23:38:38 handler.py:95] --------输入参数---------
+[E 210521 23:38:38 handler.py:96] {}
+[I 210521 23:38:38 tordb.py:236] SQL: select standard_id, name as standard_name, file_path, version, create_time, id as file_id   from standard_files where status = 1  order by create_time desc  limit 0, 10 
+[I 210521 23:38:38 tordb.py:236] SQL:select count(1) as counter  from standard_files where status = 1  order by create_time desc  limit 0, 10 
+[E 210521 23:38:38 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611518, 'data': {'content': [], 'total_elements': 0}}
+[E 210521 23:38:38 application.py:53] [9023][ 200]:[ GET]:[/standard/file_list]::[uid:]:[2.19ms]:[1]:[成功]--[{}]
+[E 210521 23:38:39 handler.py:95] --------输入参数---------
+[E 210521 23:38:39 handler.py:96] {}
+[I 210521 23:38:39 tordb.py:236] SQL: select a.name as folder_name, b.sort_order, c.name as category_name, a.id as folder_id, c.id as category_id  from file_folders a join file_category_folder_rel b on a.id = b.folder_id  join file_categories c on c.id = b.category_id  where a.status = 1 and b.status = 1 and c.status = 1   order by b.sort_order asc, c.sort_order asc 
+[E 210521 23:38:39 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611519, 'data': []}
+[E 210521 23:38:39 application.py:53] [9023][ 200]:[ GET]:[/files/folder_list]::[uid:]:[2.66ms]:[1]:[成功]--[{}]
+[E 210521 23:38:39 handler.py:95] --------输入参数---------
+[E 210521 23:38:39 handler.py:96] {}
+[I 210521 23:38:39 tordb.py:236] SQL: select id as category_id, name as category_name from file_categories  where status = 1 order by sort_order asc 
+[E 210521 23:38:39 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611519, 'data': []}
+[E 210521 23:38:39 application.py:53] [9023][ 200]:[ GET]:[/files/category_list]::[uid:]:[1.92ms]:[1]:[成功]--[{}]
+[E 210521 23:38:40 handler.py:95] --------输入参数---------
+[E 210521 23:38:40 handler.py:96] {}
+[I 210521 23:38:40 tordb.py:236] SQL: select id as folder_id, name as folder_name from standard_folders  where status = 1 and parent_folder_id = '-1' order by sort_order asc 
+[E 210521 23:38:40 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611520, 'data': []}
+[E 210521 23:38:40 application.py:53] [9023][ 200]:[ GET]:[/standard/folder_list]::[uid:]:[1.95ms]:[1]:[成功]--[{}]
+[E 210521 23:38:40 handler.py:95] --------输入参数---------
+[E 210521 23:38:40 handler.py:96] {}
+[I 210521 23:38:40 tordb.py:236] SQL: select standard_id, name as standard_name, file_path, version, create_time, id as file_id   from standard_files where status = 1  order by create_time desc  limit 0, 10 
+[I 210521 23:38:40 tordb.py:236] SQL:select count(1) as counter  from standard_files where status = 1  order by create_time desc  limit 0, 10 
+[E 210521 23:38:40 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611520, 'data': {'content': [], 'total_elements': 0}}
+[E 210521 23:38:40 application.py:53] [9023][ 200]:[ GET]:[/standard/file_list]::[uid:]:[2.39ms]:[1]:[成功]--[{}]
+[E 210521 23:39:05 handler.py:95] --------输入参数---------
+[E 210521 23:39:05 handler.py:96] {}
+[E 210521 23:39:05 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611545, 'data': None}
+[E 210521 23:39:05 application.py:53] [9023][ 200]:[OPTIONS]:[/files/folder_list]::[uid:]:[1.26ms]:[0]:[服务异常]--[{}]
+[E 210521 23:39:05 handler.py:95] --------输入参数---------
+[E 210521 23:39:05 handler.py:96] {}
+[E 210521 23:39:05 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611545, 'data': None}
+[E 210521 23:39:05 application.py:53] [9023][ 200]:[OPTIONS]:[/files/category_list]::[uid:]:[1.10ms]:[0]:[服务异常]--[{}]
+[E 210521 23:39:05 handler.py:95] --------输入参数---------
+[E 210521 23:39:05 handler.py:96] {}
+[I 210521 23:39:05 tordb.py:236] SQL: select a.name as folder_name, b.sort_order, c.name as category_name, a.id as folder_id, c.id as category_id  from file_folders a join file_category_folder_rel b on a.id = b.folder_id  join file_categories c on c.id = b.category_id  where a.status = 1 and b.status = 1 and c.status = 1   order by b.sort_order asc, c.sort_order asc 
+[E 210521 23:39:05 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611545, 'data': []}
+[E 210521 23:39:05 application.py:53] [9023][ 200]:[ GET]:[/files/folder_list]::[uid:]:[2.09ms]:[1]:[成功]--[{}]
+[E 210521 23:39:05 handler.py:95] --------输入参数---------
+[E 210521 23:39:05 handler.py:96] {}
+[I 210521 23:39:05 tordb.py:236] SQL: select id as category_id, name as category_name from file_categories  where status = 1 order by sort_order asc 
+[E 210521 23:39:05 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611545, 'data': []}
+[E 210521 23:39:05 application.py:53] [9023][ 200]:[ GET]:[/files/category_list]::[uid:]:[1.63ms]:[1]:[成功]--[{}]
+[E 210521 23:39:07 handler.py:95] --------输入参数---------
+[E 210521 23:39:07 handler.py:96] {}
+[E 210521 23:39:07 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611547, 'data': None}
+[E 210521 23:39:07 application.py:53] [9023][ 200]:[OPTIONS]:[/standard/folder_list]::[uid:]:[1.46ms]:[0]:[服务异常]--[{}]
+[E 210521 23:39:07 handler.py:95] --------输入参数---------
+[E 210521 23:39:07 handler.py:96] {}
+[E 210521 23:39:07 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611547, 'data': None}
+[E 210521 23:39:07 application.py:53] [9023][ 200]:[OPTIONS]:[/standard/file_list]::[uid:]:[1.22ms]:[0]:[服务异常]--[{}]
+[E 210521 23:39:07 handler.py:95] --------输入参数---------
+[E 210521 23:39:07 handler.py:96] {}
+[I 210521 23:39:07 tordb.py:236] SQL: select id as folder_id, name as folder_name from standard_folders  where status = 1 and parent_folder_id = '-1' order by sort_order asc 
+[E 210521 23:39:07 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611547, 'data': []}
+[E 210521 23:39:07 application.py:53] [9023][ 200]:[ GET]:[/standard/folder_list]::[uid:]:[2.14ms]:[1]:[成功]--[{}]
+[E 210521 23:39:07 handler.py:95] --------输入参数---------
+[E 210521 23:39:07 handler.py:96] {}
+[I 210521 23:39:07 tordb.py:236] SQL: select standard_id, name as standard_name, file_path, version, create_time, id as file_id   from standard_files where status = 1  order by create_time desc  limit 0, 10 
+[I 210521 23:39:07 tordb.py:236] SQL:select count(1) as counter  from standard_files where status = 1  order by create_time desc  limit 0, 10 
+[E 210521 23:39:07 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611547, 'data': {'content': [], 'total_elements': 0}}
+[E 210521 23:39:07 application.py:53] [9023][ 200]:[ GET]:[/standard/file_list]::[uid:]:[2.27ms]:[1]:[成功]--[{}]
+[E 210521 23:39:09 handler.py:95] --------输入参数---------
+[E 210521 23:39:09 handler.py:96] {'page': [b'1']}
+[E 210521 23:39:09 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611549, 'data': None}
+[E 210521 23:39:09 application.py:53] [9023][ 200]:[OPTIONS]:[/images/image_list?page=1]::[uid:]:[1.55ms]:[0]:[服务异常]--[{"page":"1"}]
+[E 210521 23:39:09 handler.py:95] --------输入参数---------
+[E 210521 23:39:09 handler.py:96] {'page': [b'1']}
+[I 210521 23:39:09 tordb.py:236] SQL: select * from images  where application_status = '1' and status = '1'  order by create_time desc  limit 0, 10 
+[I 210521 23:39:09 tordb.py:236] SQL: select count(1) as counter from images   where application_status = '1' and status = '1' 
+[I 210521 23:39:09 tordb.py:236] SQL: select name from user where id = '3' and status = 1 
+[I 210521 23:39:09 tordb.py:236] SQL: select name from user where id = '3' and status = 1 
+[E 210521 23:39:09 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611549, 'data': {'content': [{'id': 25, 'customer_name': 'fdasfd', 'vehicle_model': 'dafdas', 'product_name': 'zhiqidd', 'product_oid': 'CLX001-1010', 'product_rule_id': '21', 'product_rule_cid': 'LX', 'product_rule_index': '001', 'product_rule_spec': '1010', 'product_cid': 'fdfd', 'create_time': datetime.datetime(2021, 5, 11, 20, 17, 40), 'modify_time': datetime.datetime(2021, 5, 11, 20, 18, 20), 'application_status': 1, 'status': 1, 'product_description': 'ddd', 'applicant_id': 3, 'audit_id': 3, 'editor_id': None, 'index': 1, 'application_time': '2021-05-11', 'applicant_name': '鲍智启'}, {'id': 24, 'customer_name': 'fdasfd', 'vehicle_model': 'dafdas', 'product_name': 'zhiqi', 'product_oid': 'CLX001-1010', 'product_rule_id': '21', 'product_rule_cid': 'LX', 'product_rule_index': '001', 'product_rule_spec': '1010', 'product_cid': 'fdfd', 'create_time': datetime.datetime(2021, 5, 11, 17, 23, 4), 'modify_time': datetime.datetime(2021, 5, 11, 17, 25, 53), 'application_status': 1, 'status': 1, 'product_description': 'ddd', 'applicant_id': 3, 'audit_id': 3, 'editor_id': None, 'index': 2, 'application_time': '2021-05-11', 'applicant_name': '鲍智启'}], 'total_elements': 2}}
+[E 210521 23:39:09 application.py:53] [9023][ 200]:[ GET]:[/images/image_list?page=1]::[uid:]:[3.26ms]:[1]:[成功]--[{"page":"1"}]
+[E 210521 23:39:09 handler.py:95] --------输入参数---------
+[E 210521 23:39:09 handler.py:96] {'page': [b'1']}
+[E 210521 23:39:09 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611549, 'data': None}
+[E 210521 23:39:09 application.py:53] [9023][ 200]:[OPTIONS]:[/images/image_applications?page=1]::[uid:]:[1.65ms]:[0]:[服务异常]--[{"page":"1"}]
+[E 210521 23:39:09 handler.py:95] --------输入参数---------
+[E 210521 23:39:09 handler.py:96] {'page': [b'1']}
+[I 210521 23:39:09 tordb.py:236] SQL: select * from images  where application_status = '0' and status = '1'  order by create_time desc  limit 0, 10 
+[I 210521 23:39:09 tordb.py:236] SQL: select count(1) as counter from images   where application_status = '0' and status = '1' 
+[I 210521 23:39:09 tordb.py:236] SQL: select name from user where id = '3' and status = 1 
+[I 210521 23:39:09 tordb.py:236] SQL: select name from user where id = '3' and status = 1 
+[E 210521 23:39:09 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611549, 'data': {'content': [{'id': 28, 'customer_name': 'fdasfd', 'vehicle_model': 'dafdas2ddd', 'product_name': 'zhiqidd', 'product_oid': 'CLX004-1010', 'product_rule_id': '21', 'product_rule_cid': 'LX', 'product_rule_index': '004', 'product_rule_spec': '1010', 'product_cid': 'fdfd', 'create_time': datetime.datetime(2021, 5, 11, 20, 33, 18), 'modify_time': None, 'application_status': 0, 'status': 1, 'product_description': 'ddd', 'applicant_id': 3, 'audit_id': None, 'editor_id': None, 'index': 1, 'application_time': '2021-05-11', 'applicant_name': '鲍智启'}, {'id': 27, 'customer_name': 'fdasfd', 'vehicle_model': 'dafdas2dd', 'product_name': 'zhiqidd', 'product_oid': 'CLX003-1010', 'product_rule_id': '21', 'product_rule_cid': 'LX', 'product_rule_index': '003', 'product_rule_spec': '1010', 'product_cid': 'fdfd', 'create_time': datetime.datetime(2021, 5, 11, 20, 32, 13), 'modify_time': None, 'application_status': 0, 'status': 1, 'product_description': 'ddd', 'applicant_id': 3, 'audit_id': None, 'editor_id': None, 'index': 2, 'application_time': '2021-05-11', 'applicant_name': '鲍智启'}], 'total_elements': 2}}
+[E 210521 23:39:09 application.py:53] [9023][ 200]:[ GET]:[/images/image_applications?page=1]::[uid:]:[3.22ms]:[1]:[成功]--[{"page":"1"}]
+[E 210521 23:39:10 handler.py:95] --------输入参数---------
+[E 210521 23:39:10 handler.py:96] {'page': [b'1']}
+[E 210521 23:39:10 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611550, 'data': None}
+[E 210521 23:39:10 application.py:53] [9023][ 200]:[OPTIONS]:[/images/image_rule_list?page=1]::[uid:]:[2.01ms]:[0]:[服务异常]--[{"page":"1"}]
+[E 210521 23:39:10 handler.py:95] --------输入参数---------
+[E 210521 23:39:10 handler.py:96] {'page': [b'1']}
+[I 210521 23:39:10 tordb.py:236] SQL: select * from images_rules  where status = '1'  order by create_time desc  limit 0, 10 
+[I 210521 23:39:10 tordb.py:236] SQL: select count(1) as counter from images_rules   where status = '1' 
+[E 210521 23:39:10 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611550, 'data': {'content': [{'id': 23, 'product_cid': 'LM', 'product_name_chn': '螺栓', 'product_name_en': 'luoshuang', 'product_type': '螺栓', 'product_remarks': '的奋斗奋斗', 'has_dimension': 0, 'has_auto_increase': 0, 'editor_id': None, 'creator_id': 3, 'create_time': datetime.datetime(2021, 5, 10, 19, 30, 55), 'modify_time': None, 'status': 1, 'index': 1}, {'id': 21, 'product_cid': 'LX', 'product_name_chn': '螺丝钉2222', 'product_name_en': 'screw', 'product_type': '螺丝钉', 'product_remarks': 'ddd', 'has_dimension': 1, 'has_auto_increase': 0, 'editor_id': 3, 'creator_id': 3, 'create_time': datetime.datetime(2021, 5, 10, 19, 26, 6), 'modify_time': datetime.datetime(2021, 5, 11, 23, 24, 35), 'status': 1, 'index': 2}, {'id': 20, 'product_cid': '2A', 'product_name_chn': '组合开关', 'product_name_en': 'switch', 'product_type': '门锁', 'product_remarks': '组合开关2', 'has_dimension': 0, 'has_auto_increase': 1, 'editor_id': 3, 'creator_id': 3, 'create_time': datetime.datetime(2021, 5, 10, 19, 23, 48), 'modify_time': datetime.datetime(2021, 5, 11, 15, 13, 34), 'status': 1, 'index': 3}], 'total_elements': 3}}
+[E 210521 23:39:10 application.py:53] [9023][ 200]:[ GET]:[/images/image_rule_list?page=1]::[uid:]:[3.83ms]:[1]:[成功]--[{"page":"1"}]
+[E 210521 23:39:10 handler.py:95] --------输入参数---------
+[E 210521 23:39:10 handler.py:96] {'page': [b'1']}
+[I 210521 23:39:10 tordb.py:236] SQL: select * from images  where application_status = '0' and status = '1'  order by create_time desc  limit 0, 10 
+[I 210521 23:39:10 tordb.py:236] SQL: select count(1) as counter from images   where application_status = '0' and status = '1' 
+[I 210521 23:39:10 tordb.py:236] SQL: select name from user where id = '3' and status = 1 
+[I 210521 23:39:10 tordb.py:236] SQL: select name from user where id = '3' and status = 1 
+[E 210521 23:39:10 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611550, 'data': {'content': [{'id': 28, 'customer_name': 'fdasfd', 'vehicle_model': 'dafdas2ddd', 'product_name': 'zhiqidd', 'product_oid': 'CLX004-1010', 'product_rule_id': '21', 'product_rule_cid': 'LX', 'product_rule_index': '004', 'product_rule_spec': '1010', 'product_cid': 'fdfd', 'create_time': datetime.datetime(2021, 5, 11, 20, 33, 18), 'modify_time': None, 'application_status': 0, 'status': 1, 'product_description': 'ddd', 'applicant_id': 3, 'audit_id': None, 'editor_id': None, 'index': 1, 'application_time': '2021-05-11', 'applicant_name': '鲍智启'}, {'id': 27, 'customer_name': 'fdasfd', 'vehicle_model': 'dafdas2dd', 'product_name': 'zhiqidd', 'product_oid': 'CLX003-1010', 'product_rule_id': '21', 'product_rule_cid': 'LX', 'product_rule_index': '003', 'product_rule_spec': '1010', 'product_cid': 'fdfd', 'create_time': datetime.datetime(2021, 5, 11, 20, 32, 13), 'modify_time': None, 'application_status': 0, 'status': 1, 'product_description': 'ddd', 'applicant_id': 3, 'audit_id': None, 'editor_id': None, 'index': 2, 'application_time': '2021-05-11', 'applicant_name': '鲍智启'}], 'total_elements': 2}}
+[E 210521 23:39:10 application.py:53] [9023][ 200]:[ GET]:[/images/image_applications?page=1]::[uid:]:[3.26ms]:[1]:[成功]--[{"page":"1"}]
+[E 210521 23:39:11 handler.py:95] --------输入参数---------
+[E 210521 23:39:11 handler.py:96] {'page': [b'1']}
+[I 210521 23:39:11 tordb.py:236] SQL: select * from images  where application_status = '1' and status = '1'  order by create_time desc  limit 0, 10 
+[I 210521 23:39:11 tordb.py:236] SQL: select count(1) as counter from images   where application_status = '1' and status = '1' 
+[I 210521 23:39:11 tordb.py:236] SQL: select name from user where id = '3' and status = 1 
+[I 210521 23:39:11 tordb.py:236] SQL: select name from user where id = '3' and status = 1 
+[E 210521 23:39:11 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611551, 'data': {'content': [{'id': 25, 'customer_name': 'fdasfd', 'vehicle_model': 'dafdas', 'product_name': 'zhiqidd', 'product_oid': 'CLX001-1010', 'product_rule_id': '21', 'product_rule_cid': 'LX', 'product_rule_index': '001', 'product_rule_spec': '1010', 'product_cid': 'fdfd', 'create_time': datetime.datetime(2021, 5, 11, 20, 17, 40), 'modify_time': datetime.datetime(2021, 5, 11, 20, 18, 20), 'application_status': 1, 'status': 1, 'product_description': 'ddd', 'applicant_id': 3, 'audit_id': 3, 'editor_id': None, 'index': 1, 'application_time': '2021-05-11', 'applicant_name': '鲍智启'}, {'id': 24, 'customer_name': 'fdasfd', 'vehicle_model': 'dafdas', 'product_name': 'zhiqi', 'product_oid': 'CLX001-1010', 'product_rule_id': '21', 'product_rule_cid': 'LX', 'product_rule_index': '001', 'product_rule_spec': '1010', 'product_cid': 'fdfd', 'create_time': datetime.datetime(2021, 5, 11, 17, 23, 4), 'modify_time': datetime.datetime(2021, 5, 11, 17, 25, 53), 'application_status': 1, 'status': 1, 'product_description': 'ddd', 'applicant_id': 3, 'audit_id': 3, 'editor_id': None, 'index': 2, 'application_time': '2021-05-11', 'applicant_name': '鲍智启'}], 'total_elements': 2}}
+[E 210521 23:39:11 application.py:53] [9023][ 200]:[ GET]:[/images/image_list?page=1]::[uid:]:[3.46ms]:[1]:[成功]--[{"page":"1"}]
+[E 210521 23:39:13 handler.py:95] --------输入参数---------
+[E 210521 23:39:13 handler.py:96] {}
+[E 210521 23:39:13 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611553, 'data': None}
+[E 210521 23:39:13 application.py:53] [9023][ 200]:[OPTIONS]:[/standard/folder_list]::[uid:]:[1.51ms]:[0]:[服务异常]--[{}]
+[E 210521 23:39:13 handler.py:95] --------输入参数---------
+[E 210521 23:39:13 handler.py:96] {}
+[E 210521 23:39:13 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611553, 'data': None}
+[E 210521 23:39:13 application.py:53] [9023][ 200]:[OPTIONS]:[/standard/file_list]::[uid:]:[1.72ms]:[0]:[服务异常]--[{}]
+[E 210521 23:39:13 handler.py:95] --------输入参数---------
+[E 210521 23:39:13 handler.py:96] {}
+[I 210521 23:39:13 tordb.py:236] SQL: select id as folder_id, name as folder_name from standard_folders  where status = 1 and parent_folder_id = '-1' order by sort_order asc 
+[E 210521 23:39:13 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611553, 'data': []}
+[E 210521 23:39:13 application.py:53] [9023][ 200]:[ GET]:[/standard/folder_list]::[uid:]:[1.79ms]:[1]:[成功]--[{}]
+[E 210521 23:39:13 handler.py:95] --------输入参数---------
+[E 210521 23:39:13 handler.py:96] {}
+[I 210521 23:39:13 tordb.py:236] SQL: select standard_id, name as standard_name, file_path, version, create_time, id as file_id   from standard_files where status = 1  order by create_time desc  limit 0, 10 
+[I 210521 23:39:13 tordb.py:236] SQL:select count(1) as counter  from standard_files where status = 1  order by create_time desc  limit 0, 10 
+[E 210521 23:39:13 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611553, 'data': {'content': [], 'total_elements': 0}}
+[E 210521 23:39:13 application.py:53] [9023][ 200]:[ GET]:[/standard/file_list]::[uid:]:[1.91ms]:[1]:[成功]--[{}]
+[E 210521 23:39:13 handler.py:95] --------输入参数---------
+[E 210521 23:39:13 handler.py:96] {}
+[E 210521 23:39:13 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611553, 'data': None}
+[E 210521 23:39:13 application.py:53] [9023][ 200]:[OPTIONS]:[/files/folder_list]::[uid:]:[1.50ms]:[0]:[服务异常]--[{}]
+[E 210521 23:39:13 handler.py:95] --------输入参数---------
+[E 210521 23:39:13 handler.py:96] {}
+[E 210521 23:39:13 handler.py:198] {'code': 0, 'msg': '服务异常', 'time': 1621611553, 'data': None}
+[E 210521 23:39:13 application.py:53] [9023][ 200]:[OPTIONS]:[/files/category_list]::[uid:]:[1.36ms]:[0]:[服务异常]--[{}]
+[E 210521 23:39:13 handler.py:95] --------输入参数---------
+[E 210521 23:39:13 handler.py:96] {}
+[I 210521 23:39:13 tordb.py:236] SQL: select a.name as folder_name, b.sort_order, c.name as category_name, a.id as folder_id, c.id as category_id  from file_folders a join file_category_folder_rel b on a.id = b.folder_id  join file_categories c on c.id = b.category_id  where a.status = 1 and b.status = 1 and c.status = 1   order by b.sort_order asc, c.sort_order asc 
+[E 210521 23:39:13 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611553, 'data': []}
+[E 210521 23:39:13 application.py:53] [9023][ 200]:[ GET]:[/files/folder_list]::[uid:]:[1.85ms]:[1]:[成功]--[{}]
+[E 210521 23:39:13 handler.py:95] --------输入参数---------
+[E 210521 23:39:13 handler.py:96] {}
+[I 210521 23:39:13 tordb.py:236] SQL: select id as category_id, name as category_name from file_categories  where status = 1 order by sort_order asc 
+[E 210521 23:39:13 handler.py:198] {'code': 1, 'msg': '成功', 'time': 1621611553, 'data': []}
+[E 210521 23:39:13 application.py:53] [9023][ 200]:[ GET]:[/files/category_list]::[uid:]:[1.52ms]:[1]:[成功]--[{}]
