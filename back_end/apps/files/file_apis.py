@@ -22,7 +22,6 @@ from utils.httpmixin import HTTPContent
 from apps.handler import BaseHandler, UserBaseHandler
 from config.config import SECRETE_KEY
 from core.cache import *
-from pdf2docx import Converter
 
 
 class CreateCategory(UserBaseHandler):
@@ -349,11 +348,7 @@ class UploadFiles(UserBaseHandler):
         output_file.write(file_body.body)
 
         # 格式转化
-        if file_type == 'pdf':
-            word_file_path = file_path.replace('pdf', "docx")
-            cv = Converter(file_path)
-            cv.convert(word_file_path, start=0, end=None)
-            cv.close()
+
 
 
         # 保存数据
